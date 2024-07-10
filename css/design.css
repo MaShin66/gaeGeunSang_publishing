@@ -34,8 +34,8 @@
 .login_header{position:relative;display:flex;justify-content:center;align-items:center;}
 .login_header .back{position:absolute;left:0px;top:50%;transform:translateY(-50%);width:32px;height:32px;display:flex;justify-content:center;align-items: center;}
 /*----- 로그인 & 회원가입 폼 (공통) -----*/
-input[type=submit]{width:95%;height:42px;background:#000000;color:#fff;text-align:center;font-size:14px;border:none;border-radius: 10px;position:fixed;bottom:20px;left: 50%;transform: translateX(-50%);}
-input[type=submit]:disabled{background:#EEEEEE;color:#bdbdbd;}
+button[type=submit]{width:95%;height:42px;background:#000000;color:#fff;text-align:center;font-size:14px;border:none;border-radius: 10px;position:fixed;bottom:20px;left: 50%;transform: translateX(-50%);}
+button[type=submit]:disabled{background:#EEEEEE;color:#bdbdbd;}
 input::placeholder{color:#BDBDBD;font-weight:400;font-size:14px;}
 .form_area{display: flex;flex-direction: column;align-items: center;gap:34px}
 .form_area label {width: 100%}
