@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>마이페이지-프로필-계정설정</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="Mypageprofile">
+    <!--================== header ==================-->
+    <!------------  공통 :: header------------>
+    <section id="Mypageprofile_header">
+    <article class="mypage_header">
+        <a href="./mypage_profile_list1.html" class="close_icon"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+        <p class="fs_15 fw_500">계정 설정</p>
+        <p>&nbsp;</p>
+    </article>
+    </section>
+    <!------------ 공통 :: header 끝------------>
+    <!--================== contents ==================-->
+    <section id="Mypageprofile_edit_contents">
+    <!------------ 휴대폰번호 변경 ------------>
+        <article class="toggle_list">
+            <ul>
+                <li>
+                    <div class="name"><img src="./img/login_logo/kakao_small.svg">카카오</div>
+                    <label for="toggle" class="toggleSwitch blue">
+                        <span class="toggleButton"></span>
+                    </label>
+                </li>
+                <li>
+                    <div class="name"><img src="./img/login_logo/naver_small.svg">네이버</div>
+                    <label for="toggle" class="toggleSwitch blue">
+                        <span class="toggleButton"></span>
+                    </label>
+                </li>
+                <li>
+                    <div class="name"><img src="./img/login_logo/apple_small.svg">애플</div>
+                    <label for="toggle" class="toggleSwitch blue">
+                        <span class="toggleButton"></span>
+                    </label>
+                </li>
+                <li>
+                    <div class="name"><img src="./img/login_logo/google_small.svg">구글</div>
+                    <label for="toggle" class="toggleSwitch blue">
+                        <span class="toggleButton"></span>
+                    </label>
+                </li>
+            </ul>
+        </article>
+        <script>
+            const toggleList = document.querySelectorAll(".toggleSwitch");
+
+            toggleList.forEach(($toggle) => {
+            $toggle.onclick = () => {
+                $toggle.classList.toggle('active');
+            }
+            });
+        </script>
+    <!------------ 휴대폰번호 끝 ------------>
+    </section>
+  </div>
+</body>
+</html>

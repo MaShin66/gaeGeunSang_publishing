@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>이메일로그인</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!------------ 이메일로그인 ------------>
+    <div id="login" class="sign_up">
+        <!--상단바-->
+        <div class="login_header pt_20 pb_20">
+            <a href="./sign_up_A.html" class="back"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+            <h2 class="fs_14">이메일 로그인</h2>
+        </div>
+        <section>
+            <!-- 이메일로그인 폼-->
+            <form id="signUp" class="form_area">
+                <label for="email" >
+                    <p class="fs_12 mb_18">이메일 입력</p>
+                    <div class="input_box pb_10 mb_7">
+                        <input id="emailInput" class="fs_14 w-90" type="email" placeholder="이메일 입력" >
+                        <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
+                        <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
+                    </div>
+                    <div class="email_check warnning-txt fs_12 fw_500">이메일 형식이 올바르지 않습니다.</div>
+                </label>
+                <label for="password">
+                    <div class="input_box pb_10 mb_7">
+                        <input id="passwordInput" class="fs_14 w-90" type="password" placeholder="비밀번호 입력" >
+                        <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
+                        <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
+                    </div>
+                    <div class="password_check warnning-txt fs_12 fw_500">8자리 이상 입력해주세요.</div>
+                </label>
+            </form>
+            
+            <!--계정찾기-->
+            <ul class="btm_txt_btn">
+                <li><a href="./find.html" class="fs_12 fc_gr75">이메일 찾기</a></li>
+                <li><a href="./reset_password.html" class="fs_12 fc_gr75">비밀번호 재설정</a></li>
+            </ul>
+
+            <!--submit-->
+            <input id="submitBtn" type='submit' value="로그인"  disabled>
+
+            <script>
+                /* 초기값 : 경고문 + 체크 표시안함 + submit버튼 비활성화*/
+                $('.warnning-txt').hide();
+                $('.check_on').hide();
+        
+                /* 이메일 유효성 검사 */
+                function checkEmail(email) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                }
+        
+                /* 비밀번호 유효성 검사 (8자이상) */
+                function checkPassword(password) {
+                    return password.length >= 8;
+                }
+        
+                /* 경고문 표시 */
+                function toggleWarning($inputBox, showWarning) {
+                    if (showWarning) {
+                        $inputBox.siblings('.warnning-txt').show();
+                    } else {
+                        $inputBox.siblings('.warnning-txt').hide();
+                    }
+                }
+        
+                /* 입력완료 표시 */
+                function toggleCheckIcon($inputBox, valid) {
+                    if (valid) {
+                        $inputBox.find('.check').hide();
+                        $inputBox.find('.check_on').show();
+                    } else {
+                        $inputBox.find('.check').show();
+                        $inputBox.find('.check_on').hide();
+                    }
+                }
+        
+                /* 입력값 삭제 + 경고문 삭제 */
+                function removeInput($inputBox) {
+                    $inputBox.find('input').val('');
+                    $inputBox.siblings('.warnning-txt').hide();
+                    $inputBox.find('.check_on').hide();
+                    $inputBox.find('.check').show()
+                }
+        
+                /* input 유효성검사 실행 - 이메일 */
+                $('#emailInput').on('input', function() {
+                    const email = $(this).val();
+                    const $inputBox = $(this).closest('.input_box');
+                    const valid = checkEmail(email);
+                    toggleWarning($inputBox, !valid);
+                    toggleCheckIcon($inputBox, valid);
+                });
+        
+                /* input 유효성검사 실행 - 비밀번호 */
+                $('#passwordInput').on('input', function() {
+                    const password = $(this).val();
+                    const $inputBox = $(this).closest('.input_box');
+                    const valid = checkPassword(password);
+                    toggleWarning($inputBox, !valid);
+                    toggleCheckIcon($inputBox, valid);
+                });
+        
+                /* remove_icon클릭시 : 입력값 삭제 + 경고문 삭제 */
+                $('.remove_icon').on('click', function() {
+                    const $inputBox = $(this).closest('.input_box');
+                    removeInput($inputBox);
+                });
+                </script>
+        </section>
+    </div>
+  <!------------ 이메일로그인 ------------>
+</body>
+</html>

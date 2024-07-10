@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>마이페이지 - 문의하기 읽기</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="Mypage_inquiry_list">
+    <!--================== header ==================-->
+    <!------------  공통 :: header------------>
+    <section id="Mypageprofile_header">
+    <article class="mypage_header">
+        <a onclick="history.back()" class="close_icon"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+        <p class="fs_15 fw_500">문의하기</p>
+        <p>&nbsp;</p>
+    </article>
+    </section>
+    <!------------ 공통 :: header 끝------------>
+    <!--================== contents ==================-->
+    <!------------ 답변대기 ------------>
+    <section id="Mypage_inquiry_view_contents" class="inquiry_contents">
+        <article class="inquiry_view">
+            <div class="title_area">
+                <div class="txt_area">
+                    <div class="bt_txt mb_20">
+                        <p class="date">2024.03.01<span class="time">16:24:27</span></p><!--작성일/작성시간-->
+                        <p class="answer">답변대기</p><!--답변유/무--> 
+                    </div>
+                    <p class="inquiry_title">개근상 애플리케이션에 대하여 궁금한 점이있습니다.</p><!--문의제목-->
+                </div>
+            </div>
+            <div class="content_txt">
+                개근상 애플리케이션은 언제 만들어졌고<br/>
+                위치기반 서비스에 대하여 궁금합니다.<br/>
+                <br/>
+                자세한 답변 부탁드립니다.
+            </div>
+            <!--답변있을시 d-none지우면 표시됩니다-->
+            <div class="answer_area d-none">
+                <img src="./img/intro_img.png" style="width:13px;padding-top:5px">
+                <p>
+                안녕하세요 개근상 입니다.<br/>
+                우선 애플리케이션 사용에 있어 궁금한점에 대한 답변을 드립니다.
+                <p>
+            </div>
+        </article>
+    </section>
+    <!------------ 답변대기 끝 ------------>
+  </div>
+</body>
+</html>

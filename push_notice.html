@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>푸시-공지</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!------------  푸시 header ------------>
+    <section id="Push_header">
+        <article class="wirte_header">
+            <ul class="push_tapmenu">
+                <li><a href="./push.html" class="fs_17">알림</a></li>
+                <li class="on"><a>공지</a></li>
+            </ul>
+            <a onclick="history.back()" class="close_icon"><img src="./img/close_b.svg"><span class="soundonly">닫기</span></a>
+        </article>
+    </section>
+    <!------------ 푸시 header 끝------------>
+    <!------------ 공지내용 ------------>
+    <section id="Push_list">
+        <ul class="push_box_list">
+            <!--
+            li.read = 읽음표시
+            -->
+          <li class="read">
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="profile_area">
+                    <img src="./img/intro_img.png" alt="user_profile" class="h-100">
+                  </div>
+                  <p class="user_name fs_14 fw_500">토니</p><!--보낸사람이름-->
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">개근상 여러분 반가워요 처음 인사드립니다 ❤</p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">여러분들 처음 인사드립니다. 드림 소사이어티 글로벌 플랫폼 개근상입니다.</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="profile_area">
+                    <img src="./img/intro_img.png" alt="user_profile" class="h-100">
+                  </div>
+                  <p class="user_name fs_14 fw_500">토니</p><!--보낸사람이름-->
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">개근상 여러분 반가워요 처음 인사드립니다 ❤</p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">여러분들 처음 인사드립니다. 드림 소사이어티 글로벌 플랫폼 개근상입니다.</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="profile_area">
+                    <img src="./img/intro_img.png" alt="user_profile" class="h-100">
+                  </div>
+                  <p class="user_name fs_14 fw_500">토니</p><!--보낸사람이름-->
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">개근상 여러분 반가워요 처음 인사드립니다 ❤</p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">여러분들 처음 인사드립니다. 드림 소사이어티 글로벌 플랫폼 개근상입니다.</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="profile_area">
+                    <img src="./img/intro_img.png" alt="user_profile" class="h-100">
+                  </div>
+                  <p class="user_name fs_14 fw_500">토니</p><!--보낸사람이름-->
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">개근상 여러분 반가워요 처음 인사드립니다 ❤</p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">여러분들 처음 인사드립니다. 드림 소사이어티 글로벌 플랫폼 개근상입니다.</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+        </ul>
+    </section>
+    <!------------ 오늘받은알림 끝------------>
+    <!------------ 공지읽기 ------------>
+    <section id="Read_notice">
+      <article class="wirte_header">
+          <a href="#" class="close_icon"><img src="./img/close_b.svg"><span class="soundonly">닫기</span></a>
+      </article>
+      <article class="notice_wrap">
+        <div class="title_area">
+          <p class="title fs_15 fw_500 mb_15">[공지]개근상 최초 수상자를 발표합니다! 🥁</p>
+          <p class="notice_date fs_10 fc_gr75">2024-02-07</p>
+        </div>
+        <div class="notice_txt fs_12">
+          안녕하세요 개근상 여러분 정말 좋은 소식 있어서<br/>
+          이렇게 급하게 소식을 전합니다 ❤ <br/>
+          <br/>
+          지금까지 개근상은 개근을 많이 하신 분들에게 수상을<br/>
+          준비하고 있었습니다.<br/>
+          <br/>
+          드디어 고무적인 결과가 나타나 수상을 하기에 이르렀
+          습니다.
+          <br/>
+          이렇게 좋은 소식을 전달하게 되어 개근상 기획팀도
+          매우 기쁩니다.
+          <br/>
+          개근상 수상자에게는 소정을 상품을 전달 할 예정입니다.<br/>
+          <br/>
+          그렇다면 수상자는 누구일까요?<br/>
+          (두구두구) 🥁 <br/>
+          <br/>
+          <strong class="fw_700">
+          수상자 명단<br/>
+          - 토니<br/>
+          - 폴<br/>
+          - 리차드<br/>
+          - 지현<br/>
+          </strong>
+          <br/>
+          개근상 수상자로 선정되신 분들 전부 축하드립니다! 🎉<br/>
+        </div>
+      </article>
+    </section>
+    <!------------ 공지읽기 ------------>
+    <script>
+      // 공지열기
+      $('.push_box_list li a').on('click', function(event) {
+        event.preventDefault();
+        $('#Read_notice').addClass('on');
+      });
+      // 공지닫기
+      $('#Read_notice .close_icon').on('click', function(event) {
+        event.preventDefault();
+        $('#Read_notice').removeClass('on');
+      });
+    </script>
+</body>
+</html>

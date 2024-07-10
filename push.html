@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>푸시알림</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!------------  푸시 header ------------>
+    <section id="Push_header">
+        <article class="wirte_header">
+            <ul class="push_tapmenu">
+                <li class="on"><a class="fs_17">알림</a></li>
+                <li><a href="./push_notice.html">공지</a></li>
+            </ul>
+            <a onclick="history.back()" class="close_icon"><img src="./img/close_b.svg"><span class="soundonly">닫기</span></a>
+        </article>
+    </section>
+    <!------------ 푸시 header 끝------------>
+    <!------------ 오늘받은알림 ------------>
+    <section id="Push_list">
+        <p class="title fs_16 fw_500 pb_16">오늘 받은 알림</p>
+
+        <ul class="push_box_list">
+            <!--
+            li.read = 읽음표시
+            .profile_wrap .profile_area -> 고마워 푸시
+            .profile_wrap .stemp_thumbnail_area -> 개근도장  푸시 
+            -->
+          <li class="read">
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="profile_area">
+                    <img src="./img/profile-img3.jpg" alt="user_profile"> <!--유저 프로필사진-->
+                  </div>
+                  <p class="user_name fs_14 fw_500">토니</p><!--보낸사람이름-->
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">반가워요 처음 우리가 인사를 주고 받네요 ❤ </p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">좋은 문구가 있어서 편지로 마음을 전합니다.어리석은 사람은 인연을 만나도 인연인줄 알지...</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="stemp_thumbnail_area">
+                    <img src="./img/stemp_thumbnail01.jpg" alt="stemp_thumbnail"> <!--사진-->
+                  </div>
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">애플 비전 프로로 공부 도전하기⚡</p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">개근도장 목표가 7일 뒤에 시작합니다!</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="profile_area">
+                    <img src="./img/profile-img.jpg" alt="user_profile"> <!--유저 프로필사진-->
+                  </div>
+                  <p class="user_name fs_14 fw_500">지현</p><!--보낸사람이름-->
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">반가워요 처음 우리가 인사를 주고 받네요 ❤ </p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">좋은 문구가 있어서 편지로 마음을 전합니다.어리석은 사람은 인연을 만나도 인연인줄 알지...</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <div class="letter_list_head mb_10">
+                <div class="profile_wrap">
+                  <div class="stemp_thumbnail_area">
+                    <img src="./img/stemp_thumbnail02.jpg" alt="stemp_thumbnail"> <!--사진-->
+                  </div>
+                  <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+                  </div>
+                  <button class="side_menu"><img src="./img/side_menu_btn.svg"><span class="soundonly">메뉴ㅉ</span></button>              
+              </div>
+              <div class="letter_list_contents">
+                <p id="letter_title" class="fs_13 fw_500 mb_10">마이클펠프스 오리발 체험하기⚡</p><!--편지제목-->
+                <p id="letter_contents" class="fs_12 fc_gr75">개근도장 목표가 7일 뒤에 시작합니다!</p> <!--편지내용-->
+              </div>
+            </a>
+          </li>
+        </ul>
+    </section>
+    <!------------ 오늘받은알림 끝------------>
+</body>
+</html>

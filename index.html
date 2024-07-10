@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>홈</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="index">
+    <!------------ INDEX :: header ------------>
+      <section class="main_header01">
+        <div class="profile_area">
+          <img src="./img/profile-img.jpg" alt="user_profile"> <!--유저 프로필사진-->
+        </div>
+        <div class="txt_area ml_15">
+          <p class="fs_12 fc_gr9e">오늘은<span id="date_week">금</span>요일 입니다.</p>
+          <p class="fs_15 fc_gr333 fw_700">안녕하세요<span id="user_name">지현</span>님!</p>
+        </div>
+      </section>
+    <!------------ INDEX :: heade 끝------------> 
+      <section class="index_contents pb_100">
+        <!------------ INDEX :: ① defalt ------------>
+        <ul class="defalt_write_list  d_none ">
+          <li>
+            <a href="./stemp_write.html" class="box">
+              <img src="./img/stemp_icon.svg" alt="개근도장" class="mb_20">
+              <p class="fs_14 fw_500 fc_gr333">아직 등록한 개근도장이 없어요</p>
+              <p class="fs_14 fw_500 fc_gr333">등록해주세요</p>
+              <img src="./img/more_btn.svg" alt="more" class="mt_20">
+            </a>
+          </li>
+          <li>
+            <a href="./letter_write.html" class="box">
+              <img src="./img/letter_icon.svg" alt="편지" class="mb_20">
+              <p class="fs_14 fw_500 fc_gr333">서로 편지를 보내고</p>
+              <p class="fs_14 fw_500 fc_gr333">이야기를 나눠보세요</p>
+              <img src="./img/more_btn.svg" alt="more" class="mt_20">
+            </a>
+          </li>
+          <li><a href="" class="fs_14 fw_500 fc_gr333">보낸 편지함</a></li>
+          <li><a href="./letter_inbox.html" class="fs_14 fw_500 fc_gr333">받은 편지함</a></li>
+          <li><a href="./letter_box.html" class="fs_14 fw_500 fc_gr333">전체 편지함</a></li>
+          <li><a href="" class="fs_14 fw_500 fc_gr333">휴지통</a></li>
+        </ul>
+        <!------------ INDEX :: ① defalt 끝------------>
+        <!------------ INDEX :: ② 홈 ------------>
+        
+        <!--================== 개근도장 리스트 ==================-->
+        <article class="stemp_list_area ">
+          <div class="tit_area">
+            <div class="tit fs_18 fw_700 fc_gr333"><span><img src="./img/stemp_icon.svg" width="37.81px"></span>개근도장</div>
+            <a class="next" href="./stemp_list.html">
+              <p class="fs_13 fw_500">전체보기</p>
+              <img src="./img/next.svg" alt="next" width="6.67px">
+            </a>
+          </div>
+          <ul class="stemp_list mt_15">
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>300</span>일째</p></div>
+                  <img src="./img/stemp_thumbnail01.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">덩크왕 도전 에브리챌린저스 도전! ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>56</span>일째</p></div>
+                  <img src="./img/stemp_thumbnail02.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">마이클펠프스 오리발 체험하기 ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>13</span>일째</p></div>
+                  <img src="./img/stemp_thumbnail03.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">애플 비전 프로로 공부 도전하기! ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>300</span>일째</p></div>
+                  <img src="./img/stemp_thumbnail04.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">테니스 아마추어 테스트 도전! ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+          </ul>
+        </article>
+
+        <!--================== 고마워 리스트 ==================-->
+        <article class="letter_list_area mt_35">
+          <div class="tit_area">
+            <div class="tit fs_18 fw_700 fc_gr333"><span><img src="./img/letter_icon.svg" width="37.81px"></span>고마워</div>
+            <a class="next" href="./letter_list.html">
+              <p class="fs_13 fw_500">전체보기</p>
+              <img src="./img/next.svg" alt="next" width="6.67px">
+            </a>
+          </div>
+          <ul class="letter_list mt_15">
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/letter_thumbnail01.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>강상보</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.03.27</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>300</span>일 동안</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/letter_thumbnail02.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>토니</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.01.22</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>56</span>일 동안</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/letter_thumbnail03.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>리차드</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.03.27</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>100</span>일 동안</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/letter_thumbnail04.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>폴</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.03.22</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>365</span>일 동안</p></div>
+              </a>
+            </li>
+          </ul>
+        </article>
+        <!------------ INDEX :: ② 홈 끝------------>
+        <!------------ INDEX :: ③ no_img ------------>
+        <!--================== 개근도장 리스트 (no_img) ==================-->
+        <article class="stemp_list_area d_none">
+          <div class="tit_area">
+            <div class="tit fs_18 fw_700 fc_gr333"><span><img src="./img/stemp_icon.svg" width="37.81px"></span>개근도장</div>
+            <a class="next" href="./stemp_list.html">
+              <p class="fs_13 fw_500">전체보기</p>
+              <img src="./img/next.svg" alt="next" width="6.67px">
+            </a>
+          </div>
+          <ul class="stemp_list mt_15">
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>300</span>일째</p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">덩크왕 도전 에브리챌린저스 도전! ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>56</span>일째</p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">마이클펠프스 오리발 체험하기 ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>13</span>일째</p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">애플 비전 프로로 공부 도전하기! ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11"><span>300</span>일째</p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15">테니스 아마추어 테스트 도전! ⚡</p>
+                <p class="fs_12 fc_gr75">매일 오후2시 30분</p>
+              </a>
+            </li>
+          </ul>
+        </article>
+
+        <!--================== 고마워 리스트(no_img) ==================-->
+        <article class="letter_list_area mt_35 d_none">
+          <div class="tit_area">
+            <div class="tit fs_18 fw_700 fc_gr333"><span><img src="./img/letter_icon.svg" width="37.81px"></span>고마워</div>
+            <a class="next" href="./letter_list.html">
+              <p class="fs_13 fw_500">전체보기</p>
+              <img src="./img/next.svg" alt="next" width="6.67px">
+            </a>
+          </div>
+          <ul class="letter_list mt_15">
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>강상보</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.03.27</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>300</span>일 동안</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>토니</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.01.22</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>56</span>일 동안</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>리차드</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.03.27</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>100</span>일 동안</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img_area">
+                  <div class="date_box"><p class="fc_grfa fs_11">편지 <span>1,000+</span></p></div>
+                  <img src="./img/no_thumbnail.jpg">
+                </div>
+                <p class="title fs_15 fw_700 mt_15"><span>폴</span>님에게 편지가 도착했어요 ❤️</p>
+                <div class="date_box mt_12 mb_5"><p class="fs_12 fc_gr52"><span>22.03.22</span>부터</p></div>
+                <div class="date_box"><p class="fs_12 fc_gr52"><span>365</span>일 동안</p></div>
+              </a>
+            </li>
+          </ul>
+        </article>
+        <!------------ INDEX :: ③ no_img 끝 ------------>
+      </section>
+    <!------------ INDEX :: contents 끝------------>
+    
+    <!------------ 공통 :: menubar ------------>
+    <section class="bottom_fix_area">
+      <ul class="menubar">
+        <li class="on">
+          <a>
+            <img src="./img/menu_home_on.svg" alt="홈" class="menu_icon">
+            <p class="fs_12 fw_500">홈</p>
+          </a>
+        </li>
+        <li>
+          <a href="./stemp_list.html">
+            <img src="./img/menu_stemp.svg" alt="개근도장" class="menu_icon">
+            <p class="fs_12 fw_500">개근도장</p>
+          </a>
+        </li>
+        <li>
+          <a href="./letter_list.html">
+            <img src="./img/menu_letter.svg" alt="고마워" class="menu_icon">
+            <p class="fs_12 fw_500">고마워</p>
+          </a>
+        </li>
+        <li>
+          <a href="./mypage_list.html">
+            <img src="./img/menu_userpage.svg" alt="마이" class="menu_icon">
+            <p class="fs_12 fw_500">마이</p>
+          </a>
+        </li>
+      </ul>
+   </section>
+    <!------------ 공통 :: menubar 끝 ------------>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>마이페이지-프로필-본인인증</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="Mypageprofile">
+    <!--================== header ==================-->
+    <!------------  공통 (편집 추가) :: header------------>
+    <section id="Mypageprofile_header">
+    <article class="mypage_header">
+        <a href="./mypage_profile_edit3.html" class="close_icon"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+        <p class="fs_15 fw_500">본인인증</p>
+        <p>&nbsp;</p>
+    </darticle>
+    </section>
+    <!------------ 공통 (편집 추가) :: header 끝------------>
+    <!--================== contents ==================-->
+    <section id="Mypageprofile_edit_contents">
+    <!------------ 휴대폰번호 변경 ------------>
+    <form class="form_area">
+    <label for="phone" class="w-100">
+        <div class="input_box pb_10 mb_7 w-20">
+            <select name="phoneInput1" id="phoneInput1">
+                <option value="+82">+ 82</option>
+            </select>
+        </div>
+        <div class="input_box pb_10 mb_7 w-55">
+            <input id="phoneInput2" class="fs_14 w-90" type="tel" placeholder="휴대폰 번호 입력" maxlength="11">
+            <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
+        </div>
+        <button class="fs_14 fc_grbd pb_10 mb_7 w-25">인증요청</button>
+    </label>
+    <label for="secure" class="w-100 mt_60">
+        <div class="input_box pb_10 mb_7">
+            <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="16">
+            <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
+            <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
+            <div class="warnning-txt fs_12 fw_500">인증번호가 일치하지 않습니다</div>
+        </div>
+    </label>
+    </form>
+    <p class="fs_11 fc_grbd privacy mt_30">인증번호가 오지 않는다면, 통신사 스팸 차단 서비스 혹은<br/>휴대폰 번호 차단 여부를 확인해 주세요.(카카오톡@개근상)</p>
+    <input id="submitBtn" type='submit' value="다음"  disabled>
+    <!------------ 휴대폰번호 끝 ------------>
+    </section>
+  </div>
+</body>
+</html>

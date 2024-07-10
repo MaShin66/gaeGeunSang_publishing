@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>받은편지함</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="letter_inbox">
+    <!------------ 편지함 :: header ------------>
+    <section class="heder_fixed">
+      <div class="letter_box_header mb_20">
+        <a onclick="history.back()" class="close_icon"><img src="./img/close_b.svg"><span class="soundonly">닫기</span></a>
+        <p class="fs_15 fw_500">받은편지함</p>
+        <a href="#" class="fs_12 fc_gr75">정렬</a>
+      </div>
+      <!--================== 편지검색 ==================-->
+      <input type="search" placeholder="&nbsp;" class="letter_box_serch w-100" >
+      <!--================== 편지검색 끝==================-->
+    </section>
+    <!------------ 편지함 :: header 끝------------> 
+    <!------------ 편지함 모달 UI(읽음 /삭제) ------------>
+    <section id="letter_modla_controller" > <!--class="on" 하면 보입니다-->
+      <a href="#" class="close_icon"><img src="./img/close.svg"><spna class="soundonly">닫기</spna></a>
+      <p class="count_area w-100 fc_gr61 fs_16"><span class="count fc_wh">1</span>&nbsp;/&nbsp;<span class="total fc_gr61">25</span></p> <!--선택갯수/전체갯수-->
+      <ul class="controller">
+          <li>
+              <img src="./img/letter_modal_all.svg" alt="전체선택">
+              <p>전체선택</p>
+          </li>
+          <li>
+              <img src="./img/letter_modal_read.svg" alt="전체선택">
+              <p>안읽음</p>
+          </li>
+          <li>
+              <img src="./img/letter_modal_remove.svg" alt="전체선택">
+              <p>삭제</p>
+          </li>
+      </ul>
+    </section>
+    <!------------ 편지함 모달 UI(읽음 /삭제) ------------>
+    <!------------ 받은편지함 :: contents------------>
+    <!--편지있음-->
+    <section class="letter_inbox_contents">
+      <p class="fs_11 mb_15 fc_gr9e">받은편지함 목록</p>
+      <ul class="letter_box_list">
+        <li>
+          <a>
+            <div class="letter_list_head mb_10">
+              <div class="profile_wrap">
+                <div class="profile_area">
+                  <img src="./img/profile-img.jpg" alt="user_profile"> <!--유저 프로필사진-->
+                </div>
+                <p class="user_name fs_14 fw_500">지현</p><!--보낸사람이름-->
+              </div>
+              <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+            </div>
+            <div class="letter_list_contents">
+              <p id="letter_title" class="fs_13 fw_500 mb_10">반가워요 처음 우리가 인사를 주고 받네요 ❤ </p><!--편지제목-->
+              <p id="letter_contents" class="fs_12 fc_gr75">좋은 문구가 있어서 편지로 마음을 전합니다.어리석은 사람은 인연을 만나도 인연인줄 알지...</p> <!--편지내용-->
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <div class="letter_list_head mb_10">
+              <div class="profile_wrap">
+                <div class="profile_area">
+                  <img src="./img/profile-img3.jpg" alt="user_profile"> <!--유저 프로필사진-->
+                </div>
+                <p class="user_name fs_14 fw_500">토니</p><!--보낸사람이름-->
+              </div>
+              <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+            </div>
+            <div class="letter_list_contents">
+              <p id="letter_title" class="fs_13 fw_500 mb_10">반가워요 처음 우리가 인사를 주고 받네요 ❤ </p><!--편지제목-->
+              <p id="letter_contents" class="fs_12 fc_gr75">좋은 문구가 있어서 편지로 마음을 전합니다.어리석은 사람은 인연을 만나도 인연인줄 알지...</p><!--편지내용-->
+            </div>
+          </a>
+        </li>
+        <!--읽었을때 보낸사람이름 & 제목부분 폰트컬러 그레이로 변경-->
+        <li>
+          <a>
+            <div class="letter_list_head mb_10">
+              <div class="profile_wrap">
+                <div class="profile_area">
+                  <img src="./img/profile-img2.jpg" alt="user_profile"> <!--유저 프로필사진-->
+                </div>
+                <p class="user_name fs_14 fw_500 read">폴</p><!--보낸사람이름-->
+              </div>
+              <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+            </div>
+            <div class="letter_list_contents">
+              <p id="letter_title" class="fs_13 fw_500 mb_10 read">반가워요 처음 우리가 인사를 주고 받네요 ❤ </p><!--편지제목 // 읽음-->
+              <p id="letter_contents" class="fs_12 fc_gr75">좋은 문구가 있어서 편지로 마음을 전합니다.어리석은 사람은 인연을 만나도 인연인줄 알지...</p><!--편지내용-->
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <div class="letter_list_head mb_10">
+              <div class="profile_wrap">
+                <div class="profile_area">
+                  <img src="./img/profile-img4.jpg" alt="user_profile"> <!--유저 프로필사진-->
+                </div>
+                <p class="user_name fs_14 fw_500 read">리차드</p><!--보낸사람이름-->
+              </div>
+              <p class="input_date fs_11 fc_gr9e">2024.03.05</p><!--받은날짜-->
+            </div>
+            <div class="letter_list_contents">
+              <p id="letter_title" class="fs_13 fw_500 mb_10 read">반가워요 처음 우리가 인사를 주고 받네요 ❤ </p><!--편지제목 // 읽음-->
+              <p id="letter_contents" class="fs_12 fc_gr75">좋은 문구가 있어서 편지로 마음을 전합니다.어리석은 사람은 인연을 만나도 인연인줄 알지...</p><!--편지내용-->
+            </div>
+          </a>
+        </li>
+        
+      </ul>
+    </section>
+    <!--편지있음 끝-->
+    <script>
+      var $target = $('.letter_box_list a'); // 편지함 목록 선택
+      var $modal_controller = $('#letter_modla_controller') // 모달창
+      var $modal_controller_clear = $('#letter_modla_controller .close_icon') // 닫기버튼
+
+     /* (pc)롱클릭 이벤트 */
+     const onLongClick = ($target, duration, callback) => {
+          $target.on('mousedown', function() {
+              const timer = setTimeout(() => {
+                  callback.call(this); // 현재 요소
+              }, duration);
+
+              $(this).on('mouseup mouseleave', function() {
+                  clearTimeout(timer);
+              });
+          });
+      }
+      
+      onLongClick($target, 800, function() {
+          $modal_controller.addClass('on'); // 모달창 열기
+          $(this).addClass('holder'); // 현재 요소에 'holder' 클래스 추가
+      });
+
+      
+      /* 모달창 닫기 */
+      $modal_controller_clear.on('click',function(){
+          $modal_controller.removeClass('on');
+          $target.removeClass('holder');
+      })
+  </script>
+  <!--편지가 없습니다-->
+  <section class="letter_inbox_contents  d_none">
+      <article class="letter_empty">
+          <img src="./img/letter_empty.svg" alt="편지가 없습니다">
+          <p class="fs_13 fw_500 mt_20">편지가 없습니다.</p>
+      </article>    
+  </section>
+  <!--편지가 없습니다 끝-->
+    <!------------ 받은편지함 :: contents 끝------------>
+    
+  </div>
+</body>
+</html>

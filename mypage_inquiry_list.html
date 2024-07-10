@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>마이페이지 - 문의하기 목록</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/design.css" />
+  <!-- JS -->
+  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="Mypage_inquiry_list">
+    <!--================== header ==================-->
+    <!------------  공통 :: header------------>
+    <section id="Mypageprofile_header">
+    <article class="mypage_header">
+        <a onclick="history.back()" class="close_icon"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+        <p class="fs_15 fw_500">문의하기</p>
+        <a href="./mypage_inquiry_write.html" class="inquiry_write_icon"><img src="./img/inquiry_write.png"><span class="soundonly">작성하기</span></a>
+    </article>
+    </section>
+    <!------------ 공통 :: header 끝------------>
+    <!--================== contents ==================-->
+    <section id="Mypage_inquiry_contents" class="inquiry_contents">
+        <article class="inquiry_list">
+            <ul>
+                <li>
+                    <a href="mypage_inquiry_view.html">
+                    <div class="txt_area">
+                        <p class="inquiry_title w-80">개근상 애플리케이션에 대하여 궁금한 점이있습니다.</p><!--문의제목-->
+                        <div class="bt_txt">
+                            <p class="date">2024.03.01<span class="time">16:24:27</span></p><!--작성일/작성시간-->
+                            <p class="answer">답변대기</p><!--답변유/무--> 
+                        </div>
+                    </div>
+                    <img src="./img/next2.svg"><span class="soundonly">본문가기</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                    <div class="txt_area">
+                        <p class="inquiry_title">개근상은 어떻게 받을 수 있나요?</p><!--문의제목-->
+                        <div class="bt_txt">
+                            <p class="date">2024.03.01<span class="time">16:24:27</span></p><!--작성일/작성시간-->
+                            <p class="answer">답변완료</p><!--답변유/무--> 
+                        </div>
+                    </div>
+                    <img src="./img/next2.svg"><span class="soundonly">본문가기</span>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </section>
+  </div>
+</body>
+</html>
