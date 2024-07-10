@@ -76,10 +76,10 @@ input::placeholder{color:#BDBDBD;font-weight:400;font-size:14px;}
 .defalt_write_list li a{display:flex;flex-direction: column;justify-content:center;align-items:center;border:1px solid #eee;border-radius:15px;}
 .defalt_write_list li a.box{padding:32px}
 .defalt_write_list li a:not(.box){padding:inherit;height:42px ;}
-.menubar{width:95%;height:50px;padding:0 20px;display:flex;align-items: center;justify-content: center;border-radius:100px;box-shadow: 0px 0px 30px 0px #0000000D;position: fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;z-index:999;}
+.menubar{width:95%;height:50px;padding:10px 20px;display:flex;align-items: center;justify-content: center;border-radius:100px;box-shadow: 0px 0px 30px 0px #0000000D;position: fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;z-index:999;}
 .menubar li{width:25%;}
 .menubar li a{display:flex;flex-direction: column;justify-content:center;align-items:center;}
-.menubar p{color:#E0E0E0;margin-top:3px;}
+.menubar p{color:#E0E0E0}
 .menubar .on p{color:#212121;font-weight:700;}
 /*----- INDEX :: contents  -----*/
 .index_contents{padding:0 20px 145px}
