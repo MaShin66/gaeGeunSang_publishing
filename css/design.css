@@ -41,7 +41,7 @@ input::placeholder{color:#BDBDBD;font-weight:400;font-size:14px;}
 .form_area label {width: 100%}
 .form_area input{border:none;background: none;}
 .form_area label[for=phone]{display:flex;gap: 16px;justify-content: space-between;}
-.form_area #phoneInput1{border:none;}
+.form_area #phoneInput1{width:100%;border:none; color:#000;background: url('../img/dropdown_arw2.svg')no-repeat center right;}
 .form_area .input_box{display: flex;flex-direction: row;border-bottom: 1px solid #212121;}
 .form_area .input_box .remove_icon, .form_area .input_box .check_icon{display:flex;justify-content:center;align-items:center;padding:3px 5px;}
 .form_area .input_box .check_on{display: none;}

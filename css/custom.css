@@ -18,7 +18,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 legend{position:absolute; margin:0; padding:0; font-size:0; line-height:0; text-indent:-9999em; overflow:hidden;}
 hr{display:none;}
 ol, ul, dl, dt, dd{list-style:none;}
-label, input, button, select, img{vertical-align:middle;}
+label, input, button, select, img{vertical-align:middle;appearance: none;-webkit-appearance: none;}
 button, input, select, textarea, label{font-family:'Noto Sans KR', sans-serif; margin:0;}
 button, input[type="submit"]{cursor:pointer;}
 button:disabled{cursor:default;}
@@ -33,7 +33,12 @@ button, a, button:hover, a:hover{transition:all 0.1s linear; -webkit-transition:
 p{word-break:break-all;}
 img{display:block; max-width:100%; height:auto;}
 *, :after, :before{box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
-.warnning-txt{color:var(--warning-txt)}
+.warnning-txt{color:var(--warning-txt);appearance: none;-webkit-appearance: none;}
+select::-ms-expand { display: none; }
+select { -webkit-appearance: none;}
+
+/*ios대응*/input,select{appearance: none;-webkit-appearance: none;-webkit-border-radius: 0;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+select::-ms-expand{ display:none;}
 
 :root {
 	--main: #5051B1;
