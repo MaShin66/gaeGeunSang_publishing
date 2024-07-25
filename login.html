@@ -44,11 +44,11 @@
                 </label>
                 <label for="password">
                     <div class="input_box pb_10 mb_7">
-                        <input id="passwordInput" class="fs_14 w-90" type="password" placeholder="비밀번호 입력" >
+                        <input id="passwordInput" class="fs_14 w-90" type="password" placeholder="비밀번호 입력" maxlength="6">
                         <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
                         <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
                     </div>
-                    <div class="password_check warnning-txt fs_12 fw_500">8자리 이상 입력해주세요.</div>
+                    <div class="password_check warnning-txt fs_12 fw_500">숫자 6자리를 입력해주세요.</div>
                 </label>
             </form>
             
@@ -72,11 +72,11 @@
                     return emailRegex.test(email);
                 }
         
-                /* 비밀번호 유효성 검사 (8자이상) */
+                /* 숫자로만 구성된 비밀번호 유효성 검사 (6자 이하) */
                 function checkPassword(password) {
-                    return password.length >= 8;
+                    return /^\d{1,6}$/.test(password);
                 }
-        
+                        
                 /* 경고문 표시 */
                 function toggleWarning($inputBox, showWarning) {
                     if (showWarning) {
@@ -128,6 +128,22 @@
                     const $inputBox = $(this).closest('.input_box');
                     removeInput($inputBox);
                 });
+                
+                $('.form_area .input_box input').on('input', function() {
+                    var inputText = $(this).val().trim(); // 입력된 텍스트 가져오기 (양쪽 공백 제거)
+                    var $removeIcon = $(this).siblings('.remove_icon'); // 형제 요소 중 remove_icon 찾기
+
+                    if (inputText.length > 0) {
+                        $removeIcon.addClass('on'); // 입력된 텍스트가 있으면 on 클래스 추가
+                    } else {
+                        $removeIcon.removeClass('on'); // 입력된 텍스트가 없으면 on 클래스 제거
+                    }
+                });
+
+                // 페이지 로딩 후 초기 상태 설정 (입력값이 있을 경우)
+                $('.form_area .input_box input').trigger('input');
+
+
                 </script>
         </section>
     </div>

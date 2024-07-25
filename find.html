@@ -48,7 +48,7 @@
                 </label>
                 <label for="secure">
                     <div class="input_box pb_10 mb_7">
-                        <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="16">
+                        <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="6">
                         <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
                         <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
                     </div>
@@ -57,6 +57,43 @@
             <p class="fs_11 fc_grbd privacy mt_40">인증번호가 오지 않는다면, 통신사 스팸 차단 서비스 혹은<br/>휴대폰 번호 차단 여부를 확인해 주세요.(카카오톡@개근상)</p>
             <!--submit-->
             <button id="submitBtn" type='submit'  onclick="location.href='find2.html'" >가입 계정 찾기</button>
+            <script>
+                /* 입력정상했을때 .hidden-txt 숨기기 */
+                function hideHiddenTxt($inputBox, valid) {
+                    if (valid) {
+                        $inputBox.siblings('.hidden-txt').hide();
+                    }
+                }
+
+                /* 입력값 없을때 */
+                function removeInput($inputBox) {
+                    $inputBox.find('input').val(''); //입력값 있는지 확인
+                    $inputBox.siblings('.warnning-txt').hide(); //경고문삭제
+                    $inputBox.siblings('.hidden-txt').removeClass('on'); // hidden-txt삭제
+                    $inputBox.closest('.input_box').css("border-bottom","1px solid #212121"); // input_box border값 변경
+                    $inputBox.find('.check_on').hide();
+                    $inputBox.find('.check').show()
+                }
+                /* remove_icon클릭시 : 입력값 삭제 + 경고문 삭제 + border 변경*/
+                $('.remove_icon').on('click', function() {
+                    const $inputBox = $(this).closest('.input_box');
+                    removeInput($inputBox);
+                });
+                /* 기본폼 입력시 텍스트 전체 제거 remove_icon표시  */
+                $('.form_area .input_box input').on('input', function() {
+                    var inputText = $(this).val().trim(); // 입력된 텍스트 가져오기 (양쪽 공백 제거)
+                    var $removeIcon = $(this).siblings('.remove_icon'); // 형제 요소 중 remove_icon 찾기
+
+                    if (inputText.length > 0) {
+                        $removeIcon.addClass('on'); // 입력된 텍스트가 있으면 on 클래스 추가
+                    } else {
+                        $removeIcon.removeClass('on'); // 입력된 텍스트가 없으면 on 클래스 제거
+                    }
+                });
+
+                // 페이지 로딩 후 초기 상태 설정 (입력값이 있을 경우)
+                $('.form_area .input_box input').trigger('input');
+            </script>
         </section>
         <!------------ 계정찾기 2/2 끝 ------------>
 

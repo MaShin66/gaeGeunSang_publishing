@@ -46,20 +46,20 @@
                 <label for="password">
                     <p class="hidden-txt mb_18">비밀번호 입력</p>
                     <div class="input_box pb_10 mb_7">
-                        <input id="passwordInput" class="fs_14 w-90" type="password" maxlength="16">
+                        <input id="passwordInput" class="fs_14 w-90" type="password" maxlength="6">
                         <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
                         <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
                     </div>
-                    <div class="password_check warnning-txt fs_12 fw_500">영문, 숫자, 특수문자 2가지 이상 조합 (8~16자)</div>
+                    <div class="password_check warnning-txt fs_12 fw_500">숫자 6자리를 입력해주세요.</div>
                 </label>
                 <label for="password2">
                     <p class="hidden-txt mb_18">비밀번호 재입력</p>
                     <div class="input_box pb_10 mb_7">
-                        <input id="passwordInput2" class="fs_14 w-90" type="password" maxlength="16">
+                        <input id="passwordInput2" class="fs_14 w-90" type="password" maxlength="6">
                         <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
                         <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
                     </div>
-                    <div class="password_check warnning-txt fs_12 fw_500">비밀번호가 일치하지 않습니다</div>
+                    <div class="password_check warnning-txt fs_12 fw_500">비밀번호가 일치하지 않습니다.</div>
                 </label>
             </form>
 
@@ -82,10 +82,7 @@
     
                 /* 비밀번호 유효성 검사 (8자이상) */
                 function checkPassword(password) {
-                const num = password.search(/[0-9]/g);
-                const eng = password.search(/[a-z]/ig);
-                const spe = password.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-                return password.length >= 8 && num >= 0 && eng >= 0 && spe >= 0;
+                    return /^\d{1,6}$/.test(password);
                 }
     
                 /* 비밀번호 재입력 유효성 검사 (비밀번호와 일치한지) */
@@ -220,7 +217,7 @@
                 </label>
                 <label for="secure">
                     <div class="input_box pb_10 mb_7">
-                        <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="16">
+                        <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="6">
                         <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
                         <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
                         <div class="warnning-txt fs_12 fw_500">인증번호가 일치하지 않습니다</div>
@@ -237,7 +234,22 @@
         $('.remove_icon').on('click', function() {
             const $inputBox = $(this).closest('.input_box');
             removeInput($inputBox);
-        });    
+        });
+        /* 기본폼 입력시 텍스트 전체 제거 remove_icon표시  */
+        $('.form_area .input_box input').on('input', function() {
+            var inputText = $(this).val().trim(); // 입력된 텍스트 가져오기 (양쪽 공백 제거)
+            var $removeIcon = $(this).closest('.form_area').find('.remove_icon'); // remove_icon 요소 찾기
+
+            if (inputText.length > 0) {
+                $removeIcon.addClass('on'); // 입력된 텍스트가 있으면 on 클래스 추가
+            } else {
+                $removeIcon.removeClass('on'); // 입력된 텍스트가 없으면 on 클래스 제거
+            }
+        });
+
+        // 페이지 로딩 후 초기 상태 설정 (입력값이 있을 경우)
+        $('.form_area .input_box input').trigger('input');
+        
         </script>
 
         <!------------ 이메일회원가입 2/3 끝 ------------>
