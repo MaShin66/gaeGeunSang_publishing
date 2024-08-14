@@ -1,0 +1,85 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" /> 
+
+    <title>마이페이지 - 공지사항 등록</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/design.css" />
+    <!-- JS -->
+    <script src="./js/common.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+    <div id="Mypage_inquiry_list">
+    <!--================== header ==================-->
+    <!------------  공통 :: header------------>
+    <section id="Mypageprofile_header">
+    <article class="mypage_header">
+        <a onclick="history.back()" class="close_icon"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+        <p class="fs_15 fw_500">공지사항 등록</p>
+        <p>&nbsp;</p>
+    </article>
+    </section>
+    <!------------ 공통 :: header 끝------------>
+    <!--================== contents ==================-->
+    <!------------ 문의작성 ------------>
+    <section id="Mypage_inquiry_write_contents" class="inquiry_contents">
+        <form id="Inquiry" class="write_from2">
+            <label for="Inquiry_title" class="mb_25">
+                <p class="label_tit2">제목</p>
+                <input id="Inquiry_title" name="title" type="text" equired maxlength="150" class="w-100">
+                <div class="comment2">
+                    <p class="fs_11 fc_gr9e"><span class="txt_count">0</span>/150자</p>
+                    </div>
+            </label>
+            <label for="Inquiry_main">
+                <textarea id="Inquiry_main" name="main" equired maxlength="1000" class="w-100" placeholder="내용"></textarea>
+                <div class="comment2">
+                    <p class="fs_11 fc_gr9e"><span class="txt_count2">0</span>/1000자</p>
+                    <p class="warnning-txt fs_11 d-none">10자리이상 입력해주세요.</p>
+                    </div>
+            </label>
+        </form>
+        <script>
+            /*제목 입력제한*/
+            const max_title = 150;
+            $('#Inquiry_title').on('input', function() {
+                let inputLength = $(this).val().length;
+                if (inputLength > max_title) {
+                $(this).val($(this).val().substring(0, max_title));
+                inputLength = max_title;
+                }
+                $('.txt_count').text(inputLength);
+            });
+            /*내용 입력제한*/
+            const max_main = 1000;
+            $('#Inquiry_main').on('input', function() {
+                let inputLength = $(this).val().length;
+                if (inputLength > max_main) {
+                $(this).val($(this).val().substring(0, max_main));
+                inputLength = max_main;
+                }
+                $('.txt_count2').text(inputLength);
+            });
+            </script>
+    </section>
+    <!------------ 문의작성 끝 ------------>
+    <!--submit-->
+    <button id="submitBtn" type='submit'  disabled>등록하기</button>
+
+    </div>
+    </body>
+    </html>

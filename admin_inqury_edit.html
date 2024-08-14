@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" /> 
+
+<title>관리자메뉴 - 문의정보</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="./css/common.css" />
+<link rel="stylesheet" href="./css/custom.css" />
+<link rel="stylesheet" href="./css/design.css" />
+<!-- JS -->
+<script src="./js/common.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div id="Mypageprofile_list2">
+<!--================== header ==================-->
+<!------------  공통 :: header------------>
+<section id="Mypageprofile_header">
+<article class="mypage_header">
+    <a onclick="history.back()" class="close_icon"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+    <p class="fs_15 fw_500">문의정보</p>
+    <p>&nbsp;</p>
+</article>
+</section>
+<!------------ 공통 :: header 끝------------>
+<!--================== contents ==================-->
+<!------------ 회원관리------------>
+<article class="admin_page">
+    <div class="top_area">
+        <p class="date">2024.03.01 16:24:27</p>
+        <p class="state">답변완료</p>
+    </div>
+    <form id="Inquiry" class="write_from2">
+        <label for="Inquiry_email" class="mb_15">
+            <p class="label_tit2">이메일</p>
+            <input disabled id="Inquiry_email" name="email" type="email" placeholder="ggskorea1@naver.com" required class="w-100">
+        </label>
+        <label for="Inquiry_type" class="mb_15">
+            <p class="label_tit2">문의유형</p>
+            <select name="Inquiry_type" disabled>
+                <option value="">기타문의/건의</option>
+            </select>
+        </label>
+        <label for="Inquiry_title" class="mb_25">
+            <p class="label_tit2">제목</p>
+            <input disabled id="Inquiry_title" value="개근상 애플리케이션에 대하여 궁금합니다." name="title" type="text" equired maxlength="150" class="w-100">
+        </label>
+        <label for="Inquiry_main">
+            <textarea disabled id="Inquiry_main" name="main" equired maxlength="1000" class="w-100">
+개근상 애플리케이션은 언제 만들어졌고
+위치기반 서비스에 대하여 궁금합니다.
+
+자세한 답변 부탁드립니다.</textarea>
+        </label>
+        <label for="Inquiry_main">
+            <p class="label_tit2">답변</p>
+            <textarea id="Inquiry_main" name="main" equired maxlength="1000" class="w-100" placeholder="내용"></textarea>
+        </label>
+    </form>
+    <button id="submitBtn" type='submit' >답변 수정하기</button>
+    <script>
+        /*제목 입력제한*/
+        const max_title = 150;
+        $('#Inquiry_title').on('input', function() {
+            let inputLength = $(this).val().length;
+            if (inputLength > max_title) {
+            $(this).val($(this).val().substring(0, max_title));
+            inputLength = max_title;
+            }
+            $('.txt_count').text(inputLength);
+        });
+        /*내용 입력제한*/
+        const max_main = 1000;
+        $('#Inquiry_main').on('input', function() {
+            let inputLength = $(this).val().length;
+            if (inputLength > max_main) {
+            $(this).val($(this).val().substring(0, max_main));
+            inputLength = max_main;
+            }
+            $('.txt_count2').text(inputLength);
+        });
+        </script>
+</article>
+<!------------ 회원관리 끝 ------------>
+</section>
+</div>
+</body>
+</html>
