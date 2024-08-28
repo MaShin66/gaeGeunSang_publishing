@@ -119,48 +119,13 @@
                         <!--에디터영역-->
                     </label>
                 </form>
-                
-                <script>
-                // 친구검색 모달창 열기
-                $('#to_user_serch').on('click', function(event) {
-                    event.preventDefault();
-                    $('#select_modal').addClass('on');
-                });
-                
-                // 친구검색 모달창 닫기
-                $('#select_modal .close_icon').on('click', function(event) {
-                    event.preventDefault();
-                    $('#select_modal').removeClass('on');
-                });
-                // '보내기' 버튼을 클릭했을 때 모달을 숨기고 선택된 사용자를 리스트에 추가
-                $('.select_btn').on('click', function(event) {
-                    event.preventDefault();
-                    // 클릭된 사용자의 이름과 프로필 이미지를 가져옴
-                    var userName = $(this).siblings('.profile_wrap').find('.user_name').text();
-                    var userProfileImage = $(this).siblings('.profile_wrap').find('img').attr('src');
-                    // 선택된 사용자를 리스트에 추가
-                    var selectedUserHtml = '<li><div class="profile_wrap"><div class="profile_area"><img src="' + userProfileImage + '" alt="user_profile"></div><p class="user_name fs_14 fw_500">' + userName + '</p></div><a class="remove_user_btn"><img src="./img/remove_small.svg"></a></li>';
-                    $('.to_user_select_list').append(selectedUserHtml);
-                    // 모달을 숨김
-                    $('#select_modal').removeClass('on'); // 모달을 숨김
-                    // 검색 버튼 숨기기
-                    $('#to_user_serch').hide();
-                });
-
-                // 선택된 사용자 삭제 버튼을 클릭했을 때
-                $(document).on('click', '.remove_user_btn', function(event) {
-                    event.preventDefault();
-                    $(this).closest('li').remove(); // 해당 사용자를 리스트에서 삭제
-                    $('#to_user_serch').show();
-                });
-                </script>
             </div>
             <!--================== 고마워 write 끝==================-->
             
-      </div>
+    </div>
     <!------------ 고마워 :: contents 끝------------>
     <button id="submitBtn" type='submit'>등록</button>
 
-  </div>
+    </div>
 </body>
 </html>

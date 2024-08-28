@@ -69,28 +69,6 @@
         </label>
     </form>
     <button id="submitBtn" type='submit' >답변 등록하기</button>
-    <script>
-        /*제목 입력제한*/
-        const max_title = 150;
-        $('#Inquiry_title').on('input', function() {
-            let inputLength = $(this).val().length;
-            if (inputLength > max_title) {
-            $(this).val($(this).val().substring(0, max_title));
-            inputLength = max_title;
-            }
-            $('.txt_count').text(inputLength);
-        });
-        /*내용 입력제한*/
-        const max_main = 1000;
-        $('#Inquiry_main').on('input', function() {
-            let inputLength = $(this).val().length;
-            if (inputLength > max_main) {
-            $(this).val($(this).val().substring(0, max_main));
-            inputLength = max_main;
-            }
-            $('.txt_count2').text(inputLength);
-        });
-        </script>
 </article>
 <!------------ 회원관리 끝 ------------>
 </section>

@@ -1,117 +1,80 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" /> 
 
-  <title>이메일 회원가입</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/custom.css" />
-  <link rel="stylesheet" href="./css/design.css" />
-  <!-- JS -->
-  <script src="./js/common.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<title>이메일 회원가입</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="./css/common.css" />
+<link rel="stylesheet" href="./css/custom.css" />
+<link rel="stylesheet" href="./css/design.css" />
+<!-- JS -->
+<script src="./js/common.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <!------------ 가입 계정 찾기 ------------>
-    <div id="find" class="sign_up">
-        <!--상단바-->
-        <article class="login_header pt_20 pb_20">
-            <a href="./login.html"  class="back"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
-            <h2 class="fs_14">가입 계정 찾기</h2>
+<!------------ 가입 계정 찾기 ------------>
+<div id="find" class="sign_up">
+    <!--상단바-->
+    <article class="login_header pt_20 pb_20">
+        <a href="./login.html"  class="back"><img src="./img/back.svg"><span class="soundonly">뒤로가기</span></a>
+        <h2 class="fs_14">가입 계정 찾기</h2>
+    </article>
+
+    <!------------ 계정찾기 1/2 ------------>
+    <section>
+        <form id="find" class="mt_30 form_area">
+            <label for="phone">
+                <div class="input_box pb_10 mb_7 w-20">
+                    <select name="phoneInput1" id="phoneInput1">
+                        <option value="+82">+ 82 </option>
+                    </select>
+                </div>
+                <div class="input_box pb_10 mb_7 w-55">
+                    <input id="phoneInput2" class="fs_14 w-90" type="number" placeholder="휴대폰 번호 입력" maxlength="11">
+                    <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
+                </div>
+                <button class="fs_14 fc_grbd pb_10 mb_7 w-25">인증요청</button>
+            </label>
+            <label for="secure">
+                <div class="input_box pb_10 mb_7">
+                    <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="6">
+                    <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
+                    <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
+                </div>
+            </label>
+        </form>
+        <p class="fs_11 fc_grbd privacy mt_40">인증번호가 오지 않는다면, 통신사 스팸 차단 서비스 혹은<br/>휴대폰 번호 차단 여부를 확인해 주세요.(카카오톡@개근상)</p>
+        <!--submit-->
+        <button id="submitBtn" type='submit'  onclick="location.href='find2.html'" >가입 계정 찾기</button>
+    </section>
+    <!------------ 계정찾기 2/2 끝 ------------>
+
+    <!------------ 계정찾기 3/2 ------------>
+    <section class="d_none"> 
+        <article class="complete_view">
+            <img src="./img/complete_icon.svg" alt="완료되었습니다" class="mb_30" style="width:50px" data-aos="zoom-out" data-aos-duration="1000">
+            
+            <!-- 이메일 가입자 / SNS가입자 각각 있습니다-->
+            <p class="fs_17 fw_500 d_none" data-aos="fade-up" data-aos-duration="2000">ggs@naver.com</p> <!--(이메일가입자) User email-->
+            <p class="fs_17 fw_500" data-aos="fade-up" data-aos-duration="2000"><span id="sns_name">카카오</span>계정 으로 가입하셨습니다.</p> <!--(SNS 가입자) SNS정보-->
+            
+            <p class="fs_11 fc_grbd mt_40" data-aos="fade-up" data-aos-duration="2000">해당 방법으로 로그인되지 않는다면<br/><a class="fs_11 fc_grbd link">고객센터</a>로 문의해주세요.</p>
         </article>
+        <button id="submitBtn" type='submit' onclick="location.href='login.html'">확인</button>
+    </section>
+    <!------------ 계정찾기 3/3 끝 ------------>
+</div>
 
-        <!------------ 계정찾기 1/2 ------------>
-        <section>
-            <form id="find" class="mt_30 form_area">
-                <label for="phone">
-                    <div class="input_box pb_10 mb_7 w-20">
-                        <select name="phoneInput1" id="phoneInput1">
-                            <option value="+82">+ 82 </option>
-                        </select>
-                    </div>
-                    <div class="input_box pb_10 mb_7 w-55">
-                        <input id="phoneInput2" class="fs_14 w-90" type="number" placeholder="휴대폰 번호 입력" maxlength="11">
-                        <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
-                    </div>
-                    <button class="fs_14 fc_grbd pb_10 mb_7 w-25">인증요청</button>
-                </label>
-                <label for="secure">
-                    <div class="input_box pb_10 mb_7">
-                        <input id="secureInput" class="fs_14 w-90" type="number" placeholder="인증번호 입력" maxlength="6">
-                        <div class="remove_icon"><span class="soundonly">지우기</span><img src="./img/cancel-btn.svg"></div>
-                        <div class="check_icon"><span class="soundonly">입력체크</span><img src="./img/check.svg" class="check"><img src="./img/check_on.svg" class="check_on"></div>
-                    </div>
-                </label>
-            </form>
-            <p class="fs_11 fc_grbd privacy mt_40">인증번호가 오지 않는다면, 통신사 스팸 차단 서비스 혹은<br/>휴대폰 번호 차단 여부를 확인해 주세요.(카카오톡@개근상)</p>
-            <!--submit-->
-            <button id="submitBtn" type='submit'  onclick="location.href='find2.html'" >가입 계정 찾기</button>
-            <script>
-                /* 입력정상했을때 .hidden-txt 숨기기 */
-                function hideHiddenTxt($inputBox, valid) {
-                    if (valid) {
-                        $inputBox.siblings('.hidden-txt').hide();
-                    }
-                }
-
-                /* 입력값 없을때 */
-                function removeInput($inputBox) {
-                    $inputBox.find('input').val(''); //입력값 있는지 확인
-                    $inputBox.siblings('.warnning-txt').hide(); //경고문삭제
-                    $inputBox.siblings('.hidden-txt').removeClass('on'); // hidden-txt삭제
-                    $inputBox.closest('.input_box').css("border-bottom","1px solid #212121"); // input_box border값 변경
-                    $inputBox.find('.check_on').hide();
-                    $inputBox.find('.check').show()
-                }
-                /* remove_icon클릭시 : 입력값 삭제 + 경고문 삭제 + border 변경*/
-                $('.remove_icon').on('click', function() {
-                    const $inputBox = $(this).closest('.input_box');
-                    removeInput($inputBox);
-                });
-                /* 기본폼 입력시 텍스트 전체 제거 remove_icon표시  */
-                $('.form_area .input_box input').on('input', function() {
-                    var inputText = $(this).val().trim(); // 입력된 텍스트 가져오기 (양쪽 공백 제거)
-                    var $removeIcon = $(this).siblings('.remove_icon'); // 형제 요소 중 remove_icon 찾기
-
-                    if (inputText.length > 0) {
-                        $removeIcon.addClass('on'); // 입력된 텍스트가 있으면 on 클래스 추가
-                    } else {
-                        $removeIcon.removeClass('on'); // 입력된 텍스트가 없으면 on 클래스 제거
-                    }
-                });
-
-                // 페이지 로딩 후 초기 상태 설정 (입력값이 있을 경우)
-                $('.form_area .input_box input').trigger('input');
-            </script>
-        </section>
-        <!------------ 계정찾기 2/2 끝 ------------>
-
-        <!------------ 계정찾기 3/2 ------------>
-        <section class="d_none"> 
-            <article class="complete_view">
-                <img src="./img/complete_icon.svg" alt="완료되었습니다" class="mb_30" style="width:50px" data-aos="zoom-out" data-aos-duration="1000">
-                
-                <!-- 이메일 가입자 / SNS가입자 각각 있습니다-->
-                <p class="fs_17 fw_500 d_none" data-aos="fade-up" data-aos-duration="2000">ggs@naver.com</p> <!--(이메일가입자) User email-->
-                <p class="fs_17 fw_500" data-aos="fade-up" data-aos-duration="2000"><span id="sns_name">카카오</span>계정 으로 가입하셨습니다.</p> <!--(SNS 가입자) SNS정보-->
-                
-                <p class="fs_11 fc_grbd mt_40" data-aos="fade-up" data-aos-duration="2000">해당 방법으로 로그인되지 않는다면<br/><a class="fs_11 fc_grbd link">고객센터</a>로 문의해주세요.</p>
-            </article>
-            <button id="submitBtn" type='submit' onclick="location.href='login.html'">확인</button>
-        </section>
-        <!------------ 계정찾기 3/3 끝 ------------>
-    </div>
-  
 </body>
 </html> 

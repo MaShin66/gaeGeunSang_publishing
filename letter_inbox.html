@@ -136,36 +136,6 @@
       </ul>
     </section>
     <!--편지있음 끝-->
-    <script>
-      var $target = $('.letter_box_list a'); // 편지함 목록 선택
-      var $modal_controller = $('#letter_modla_controller') // 모달창
-      var $modal_controller_clear = $('#letter_modla_controller .close_icon') // 닫기버튼
-
-     /* (pc)롱클릭 이벤트 */
-     const onLongClick = ($target, duration, callback) => {
-          $target.on('mousedown', function() {
-              const timer = setTimeout(() => {
-                  callback.call(this); // 현재 요소
-              }, duration);
-
-              $(this).on('mouseup mouseleave', function() {
-                  clearTimeout(timer);
-              });
-          });
-      }
-      
-      onLongClick($target, 800, function() {
-          $modal_controller.addClass('on'); // 모달창 열기
-          $(this).addClass('holder'); // 현재 요소에 'holder' 클래스 추가
-      });
-
-      
-      /* 모달창 닫기 */
-      $modal_controller_clear.on('click',function(){
-          $modal_controller.removeClass('on');
-          $target.removeClass('holder');
-      })
-  </script>
   <!--편지가 없습니다-->
   <section class="letter_inbox_contents  d_none">
       <article class="letter_empty">
