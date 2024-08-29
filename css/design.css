@@ -54,15 +54,16 @@ input:disabled, textarea:disabled{background:#fafafa;color:#888}
 .form_area .hidden-txt{position:absolute;margin-top:-40px;transform: translateY(40px);font-size: 14px;font-weight:400;color: #bdbdbd;z-index:-1;transition:.3s, 0.5s;}
 .form_area .hidden-txt.on{position:relative;color:#000;font-size:1.2rem;;margin-top:0;transform:translateY(0px);}
 .complete_view{position:absolute;top:35%;left:50%;transform:translate(-50%);text-align: center;width: 100%;display:flex;flex-direction: column;justify-content:center;align-items:center;transition:.3s;transition-timing-function:ease-in}
-
 /*----- 로그인 -----*/
 #login .btm_txt_btn{width:90%;margin:20px auto 0;display:flex;justify-content:center;align-items:center;}
 #login .btm_txt_btn li{width:50%;text-align:center;gap:35px;}
 /*---- 회원가입 ----*/
 .sign_up section{padding:0 20px}
 
-
-
+/*비밀번호 찾기*/
+.tl_center{text-align: center;margin:31px 0 34px}
+button.submit{color:#1E88E5;font-weight:500;}
+button.submit:disabled{color:#BDBDBD}
 
 /*===== index =====*/
 /*----- 헤더 -----*/
