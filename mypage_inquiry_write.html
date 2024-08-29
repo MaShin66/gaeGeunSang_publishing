@@ -48,9 +48,7 @@
             </label>
             <label for="Inquiry_type" class="mb_15">
                 <p class="label_tit2">문의유형</p>
-                <select name="Inquiry_type">
-                    <option value="">문의유형</option>
-                </select>
+                <button type="button" class="selectType InquiryType">문의유형</button>
             </label>
             <label for="Inquiry_title" class="mb_25">
                 <p class="label_tit2">제목</p>
@@ -68,10 +66,43 @@
             </label>
         </form>
     </section>
-    <!------------ 문의작성 끝 ------------>
-    <!--submit-->
-    <button id="submitBtn" type='submit'  disabled>문의하기</button>
-
+    <!------------ 문의작성 끝 ------------> 
+    <article class="modal_bottom">
+      <div class="InquiryType_select">
+          <div class="bar"></div>
+          <p class="fs_14 mb_15 fw_500">어떤 유형의 질문인가요?</p>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="InquiryType">
+                서비스 이용장애
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="InquiryType">
+                기타문의/건의
+              </label>
+            </li>
+          </ul>
+          
+      </div>
+    </article>
+    <script>
+      $(document).ready(function() {
+      // 모달 띄우기
+      $('.InquiryType').on('click', function() {
+        $('.modal_bottom').addClass('on');
+      });
+      
+      // 모달 화면 이외 클릭 시 모달 삭제
+      $(document).on('click', function(event) {
+        if (!$(event.target).closest('.InquiryType_select').length && !$(event.target).closest('.InquiryType').length) {
+          $('.modal_bottom').removeClass('on');
+        }
+      });
+    });
+      </script>
   </div>
 </body>
 </html>
