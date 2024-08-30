@@ -342,7 +342,7 @@ footer li .txt{flex:5}
 .inquiry_contents .date{color:#757575;}
 .inquiry_contents .date::after{content:'';display:inline-block;margin:0 7px;background:#E0E0E0;width:1px;height:10px;}
 /*문의하기 보기*/
-#Mypage_inquiry_view_contents{padding:0 20px;}
+#Mypage_inquiry_view_contents{padding:0 20px 50px;}
 .inquiry_view{margin-top:36px}
 .inquiry_view .title_area{padding:0 0 23px;border-bottom:1px solid #eee}
 .inquiry_view .content_txt{padding:23px 0 0;font-size:13px;}
