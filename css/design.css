@@ -109,6 +109,52 @@ button.submit:disabled{color:#BDBDBD}
 .stemp_list li .img_area .date_box{position:absolute;padding:3px 7px;height:22px;background:#000000b5;display:flex;justify-content: center;align-items: center;border-radius:3px;right:5px;top:5px}
 /*--list--*/
 .stemp_contents{padding:0 20px 145px;}
+/*--개근도장 뷰 페이지 로딩화면--*/
+.loading_screen{
+  position:fixed;
+  top:0;
+  left: 0;
+  right:0;
+  bottom:0;
+  background-color: #fff;
+  z-index: 10;
+}
+.loading_screen .card_wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 308px;
+}
+.loading_screen .card_wrap .bg_img{
+  display: block;
+}
+.loading_screen .card_wrap .bg_img img{
+  width:100%;
+  max-width:auto;
+}
+.loading_screen .card_wrap .post_icon{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  max-width: 34px;
+  width: 11%;
+}
+.loading_screen .card_wrap .text_box > p {
+  position:absolute;
+  font-weight: 500;
+  font-size:13px;
+}
+
+.loading_screen .card_wrap .text_box .top_left{
+  top:25px;
+  left:25px;
+}
+.loading_screen .card_wrap .text_box .bottom_right{
+  right:25px;
+  bottom :25px;
+}
 /*--view--*/
 .stemper_view_header{position:relative}
 .stemper_view_header .header_area{width:100%;padding:16px 20px;display:flex;justify-content: space-between;align-items: center;position:absolute;top:0;left:0}
